@@ -37,8 +37,9 @@ WHERE DescProduto LIKE '%Chapéu%';
 --Lista de transações com o produto “Resgatar Ponei”;
 SELECT tp.*
 FROM transacao_produto tp
-INNER JOIN produtos p ON p.IdProduto = tp.IdProduto
-WHERE p.DescProduto = 'Resgatar Ponei';
+INNER JOIN produtos p 
+    ON p.IdProduto = tp.IdProduto
+    AND p.DescProduto = 'Resgatar Ponei';
 
 -- sem usar join
 
